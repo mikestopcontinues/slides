@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024">
+  <defs>
+    <style>
+      .box {
+        fill: #f6f8f9;
+        opacity: 0.5;
+      }
+
+      .line {
+        fill: none;
+        stroke: #f6f8f9;
+        stroke-width: 6px;
+      }
+
+      #ticket-red .ticket {
+        fill: #e76f51;
+      }
+
+      #ticket-yellow .ticket {
+        fill: #ffcd67;
+      }
+
+      #ticket-blue .ticket {
+        fill: #3aa8c3;
+      }
+
+      .shadow {
+        filter: url(#shadow);
+      }
+
+      #icon {
+        opacity: 0.5;
+      }
+    </style>
+
+    <symbol id="ticket-red" viewBox="0 0 1024 512">
+      <path class="ticket" d="M0 64v128a64 64 0 0164 64 64 64 0 01-64 64v129a64 64 0 0164 63h896a64 64 0 0164-63V321a64 64 0 110-128V64a64 64 0 01-64-64H64A64 64 0 010 64z"/>
+      <path class="box" d="M704 64h192v384H704z"/>
+      <path class="line" d="M128 64h768v384H128zM704 64v384z"/>
+    </symbol>
+
+    <symbol id="ticket-yellow" viewBox="0 0 1024 512">
+      <path class="ticket" d="M0 64v128a64 64 0 0164 64 64 64 0 01-64 64v129a64 64 0 0164 63h896a64 64 0 0164-63V321a64 64 0 010-128V64a64 64 0 01-64-64H64A64 64 0 010 64z"/>
+      <path class="box" d="M704 64h192v384H704z"/>
+      <path class="line" d="M128 64h768v384H128zM704 64v384z"/>
+    </symbol>
+
+    <symbol id="ticket-blue" viewBox="0 0 1024 512">
+      <path class="ticket" d="M0 64v128a64 64 0 0164 64 64 64 0 01-64 64v129a64 64 0 0164 63h896a64 64 0 0164-63V321a64 64 0 010-128V64a64 64 0 01-64-64H64A64 64 0 010 64z"/>
+      <path class="box" d="M704 64h192v384H704z"/>
+      <path class="line" d="M128 64h768v384H128zM704 64v384z"/>
+    </symbol>
+
+    <filter id="shadow" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="-4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge> 
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g id="icon">
+    <use width="1024" height="512" transform="rotate(180 322 501) scale(.57031)" xlink:href="#ticket-yellow" class="shadow"/>
+    <use width="1024" height="512" transform="rotate(-149.75 462 423) scale(.73828)" xlink:href="#ticket-red" class="shadow"/>
+    <use width="1024" height="512" transform="rotate(-120 615 332) scale(.90625)" xlink:href="#ticket-blue" class="shadow"/>
+  </g>
+</svg>

@@ -1,10 +1,6 @@
-// import
+// export
 
-import { Deck, Slide, Heading } from 'spectacle';
-
-// vars
-
-const theme = {
+export const theme = {
   colors: {
     black: '#191a1a',
     white: '#f6f8f9',
@@ -27,21 +23,8 @@ const theme = {
     head: 'Bitter, Roboto Slab, serif',
     body: 'Rubik, Roboto, Lato, Open Sans, sans-serif',
 
-
     header: 'Bitter, Roboto Slab, serif',
     text: 'Rubik, Roboto, Lato, Open Sans, sans-serif',
     monospace: 'FiraCode-Retina, Fira Code, Roboto Mono, Menlo, Monaco, monospace',
   },
-}
-
-// component
-
-export function App() {
-  return (
-    <Deck theme={theme}>
-      <Slide backgroundColor="white">
-        <Heading color="blue">Tentpole Websites</Heading>
-      </Slide>
-    </Deck>
-  );
-}
+};
