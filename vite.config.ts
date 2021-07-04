@@ -2,6 +2,7 @@
 
 import path from 'path';
 
+import legacy from '@vitejs/plugin-legacy';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import globby from 'globby';
 import {defineConfig} from 'vite';
@@ -44,7 +45,6 @@ const htmlHead = `
 
 const inputs = globby.sync('20[0-9][0-9]/**/index.html').reduce((acc, file) => {
   acc[file.slice(0, -11)] = path.resolve(__dirname, file);
-  console.log(acc);
 
   return acc;
 }, {});
@@ -54,6 +54,7 @@ const inputs = globby.sync('20[0-9][0-9]/**/index.html').reduce((acc, file) => {
 // INFO: https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+    legacy(),
     reactRefresh(),
     reactJsx(),
     html({
@@ -76,7 +77,6 @@ export default defineConfig({
 
   server: {
     https: true,
-    port: 3030,
   },
 
   build: {
