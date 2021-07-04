@@ -1,7 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [],
   "headers": [{
     "source": "/(.*)",
     "headers" : [{"key": "X-Robots-Tag", "value": "noindex"}]
